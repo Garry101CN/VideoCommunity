@@ -17,11 +17,16 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/main_download"
-            android:layout_marginLeft="240dp"/>
+            android:layout_marginLeft="240dp"
+            android:src="@drawable/download"
+            android:background="@color/colorPrimary"/>
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="35dp"/>
+            android:layout_marginLeft="35dp"
+            android:id="@+id/history"
+            android:src="@drawable/history"
+            android:background="@color/colorPrimary"/>
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView

@@ -64,7 +64,7 @@ public class VideoWithController extends AppCompatActivity implements View.OnCli
         sqLdataSaved = new SQLdataSaved(this, "downlist.db", null, 1);
         contentValues = new ContentValues();
         db = sqLdataSaved.getWritableDatabase();
-        cursor = db.query("HistoryList", null, null, null, null, null, null);
+        cursor = db.query("downlist", null, null, null, null, null, null);
 
         fileDownloader = new FileDownloader(url);
         FileDownloader.setActivity(this);
@@ -117,7 +117,7 @@ public class VideoWithController extends AppCompatActivity implements View.OnCli
                 contentValues.put("downloadUri",url);
                 contentValues.put("userAvatar", userAvatar);
                 contentValues.put("currPosition",i);
-                db.insert("HistoryList", null, contentValues);
+                db.insert("downlist", null, contentValues);
                 contentValues.clear();
                 playerWithController.relesae();
                 finish();
